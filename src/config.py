@@ -1,23 +1,18 @@
-
-
-# Base paths
-DATA_DIR = "datasets"
-RAW_DATA_DIR = f"{DATA_DIR}"
-
 # Dataset
-DATASET_NAME = "passwords.csv"
-DATASET_PATH = f"{RAW_DATA_DIR}/{DATASET_NAME}"
+DATA_PATH = "data/passwords.csv"
 
-# Column names
+# Columns
 PASSWORD_COLUMN = "password"
-STRENGTH_COLUMN = "strength"
-RANK_COLUMN = "rank"
-CATEGORY_COLUMN = "category"
-VALUE_COLUMN = "value"
-TIME_NUIT_COLUMN = "time_unit"
-OFFLINE_CRACK_SEC_COLUMN = "offline_crack_sec"
-RANK_ALT_COLUMN = "rank_alt"
-FONT_SIZE_COLUMN = "font_size"
+TARGET_COLUMN = "strength"
 
-# Random seed
+# Strength range
+MIN_STRENGTH = 0
+MAX_STRENGTH = 2
+
+# Train / test
+TEST_SIZE = 0.2
 RANDOM_STATE = 42
+
+# Model saving
+MODEL_PATH = "models/password_classifier.pkl"
+SCALER_PATH = "models/scaler.pkl"
