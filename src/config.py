@@ -1,5 +1,5 @@
 # Dataset
-DATA_PATH = "data/passwords.csv"
+DATA_PATH = "data/data.csv"
 
 # Columns
 PASSWORD_COLUMN = "password"
