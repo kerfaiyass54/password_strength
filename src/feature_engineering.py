@@ -11,9 +11,7 @@ def extract_features(password: str) -> pd.Series:
     lowercase = sum(c.islower() for c in password)
     symbols = sum(c in string.punctuation for c in password)
     diversity = len(set(password))
-
-    probs = [freq / length for freq in Counter(password).values()]
-    entropy = -sum(p * math.log2(p) for p in probs)
+    entropy = diversity / length if length > 0 else 0
 
     return pd.Series(
         {

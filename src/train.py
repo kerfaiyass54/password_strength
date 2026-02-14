@@ -15,7 +15,6 @@ from src.config import (
 
 def train():
     X, y = load_dataset(DATA_PATH)
-
     X_train, X_test, y_train, y_test = train_test_split(
         X,
         y,
@@ -28,12 +27,16 @@ def train():
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
+    print(set(X_train.index).intersection(set(X_test.index)))
+
+
     param_grid = {
-        "n_estimators": [200, 300],
-        "max_depth": [None, 10, 20],
-        "min_samples_split": [2, 5],
-        "min_samples_leaf": [1, 2],
-    }
+    "n_estimators": [100],
+    "max_depth": [5, 10],
+    "min_samples_split": [5, 10],
+    "min_samples_leaf": [2, 5],
+}
+
 
     rf = RandomForestClassifier(
         random_state=RANDOM_STATE,

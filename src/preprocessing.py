@@ -17,5 +17,8 @@ def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
     # Keep valid strength values only
     df = df[df[TARGET_COLUMN].between(MIN_STRENGTH, MAX_STRENGTH)]
 
+    df = df.drop_duplicates(subset=[PASSWORD_COLUMN])
+
+
     return df
 
