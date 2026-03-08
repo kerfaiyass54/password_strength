@@ -1,0 +1,4 @@
+FROM Python
+
+WORKDIR /app
+
