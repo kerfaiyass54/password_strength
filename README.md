@@ -23,11 +23,17 @@ Perfect for developers, security professionals, and anyone who needs to implemen
 ## ✨ Features
 
 ✅ **Machine Learning Powered**: Uses Random Forest classifier trained on real password data
+
 ✅ **Real-time Feedback**: Angular UI provides instant strength assessment
+
 ✅ **Comprehensive Analysis**: Evaluates length, character diversity, entropy, and more
+
 ✅ **API Ready**: Easy integration with any application via REST API
+
 ✅ **Open Source**: Fully customizable and extendable
+
 ✅ **Visual Feedback**: Color-coded strength indicators and probability scores
+
 ✅ **Scalable Architecture**: Modular design for easy maintenance
 
 ---
